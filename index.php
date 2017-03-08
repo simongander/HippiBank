@@ -45,10 +45,15 @@
   </div>
 </nav>
 
-
-<?php
-require $router->parse($uri);
-?>
+<div class="container">
+  <div class = "row">
+    <div class = "col-md-offset-3 col-sm-5">
+  <?php
+  require $router->parse($uri);
+  ?>
+    </div>
+  </div>
+</div>
 </body>
 <!-- Bootstrap JS -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
