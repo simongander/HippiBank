@@ -7,3 +7,5 @@ require 'routes.php';
 $uri = $_GET['uri'] ?? '';
 
 require $router->parse($uri);
+
+?>
