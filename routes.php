@@ -8,5 +8,11 @@ $routeList = [
     'uebersicht' => 'app/Controllers/OverviewController.php'
 ];
 
+$routeDescriptions = [
+    '' => 'Home',
+    'erfassen' => 'Verleihe erfassen',
+    'bearbeiten' => 'Verleihe bearbeiten',
+    'uebersicht' => 'Übersicht'
+];
 
 $router->define($routeList);

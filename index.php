@@ -33,10 +33,10 @@
             require 'routes.php';
             foreach($routeList as $routeName=>$route){
                 if ($routeName === $uri) {
-                    echo '<li class="active"><a href="'.$routeName.'">'.$routeName.'</a></li>';
+                    echo '<li class="active"><a href="'.$routeName.'">'.$routeDescriptions[$routeName].'</a></li>';
                 }
                 else {
-                    echo '<li><a href="'.$routeName.'">'.$routeName.'</a></li>';
+                    echo '<li><a href="'.$routeName.'">'.$routeDescriptions[$routeName].'</a></li>';
                 }
             };
         ?>
