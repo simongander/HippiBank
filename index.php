@@ -48,9 +48,9 @@
 <div class="container">
   <div class = "row">
     <div class = "col-md-offset-3 col-sm-5">
-  <?php
-  require $router->parse($uri);
-  ?>
+      <?php
+      require $router->parse($uri);
+      ?>
     </div>
   </div>
 </div>
