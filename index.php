@@ -22,22 +22,24 @@
       <span><a class="navbar-brand" href = "">HippiBank</a></span>
     </div>
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        
+
         <ul class="nav navbar-nav">
+          <!-- Zeigt Routen automatisch in der Navigationsleiste an -->
         <?php
             require 'core/bootstrap.php';
+
             $uri = $_GET['uri'] ?? '';
+
             require 'routes.php';
             foreach($routeList as $routeName=>$route){
                 if ($routeName === $uri) {
-                    echo '<li> <a class="abi" a href="'.$routeName.'">'.$routeName.'</a></li>';
+                    echo '<li class="active"><a href="'.$routeName.'">'.$routeName.'</a></li>';
                 }
                 else {
                     echo '<li><a href="'.$routeName.'">'.$routeName.'</a></li>';
                 }
-                
             };
-        ?>            
+        ?>
         </ul>
     </div>
   </div>
@@ -45,10 +47,7 @@
 
 
 <?php
-
-
 require $router->parse($uri);
-
 ?>
 </body>
 <!-- Bootstrap JS -->
