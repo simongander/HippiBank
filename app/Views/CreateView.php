@@ -27,8 +27,8 @@
         <select class="btn" style="display: block; width: 100%;" id="riskStepDropdown">
           <option value="Risiko-Stufe">Risiko-Stufe</option>
           <?php
-            foreach($riskSteps as $riskStepId=>$riskStep){
-              echo '<option value="'.$riskStepId.'">'.$riskStep.'</option>';
+            foreach($riskSteps as $riskStep){
+              echo '<option value="'.$riskStep[Id].'">'.$riskStep[Risikostufe].'</option>';
             };
           ?>
         </select>
@@ -38,8 +38,8 @@
         <select class="btn" style="display: block; width: 100%;" id="hypoPacketDropdown">
           <option value="Risiko-Stufe">Hypo-Packet</option>
           <?php
-            foreach($hypoPackets as $hypoPacketId=>$hypoPacket){
-              echo '<option value="'.$hypoPacketId.'">'.$hypoPacket.'</option>';
+            foreach($hypoPackets as $hypoPacket){
+              echo '<option value="'.$hypoPacket[id].'">'.$hypoPacket[package].'</option>';
             };
             ?>
         </select>
