@@ -46,7 +46,7 @@
 
 <div class="container" style="background-color: LightSlateGray">
   <div class = "row">
-    <div class = "col-md-offset-3 col-sm-5">
+    <div class = "col-md-offset-3 col-sm-6">
       <?php
       require $router->parse($uri);
       ?>
