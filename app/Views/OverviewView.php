@@ -7,6 +7,10 @@
   <title>Übersicht</title>
 </head>
 <body>
-  Übersicht
+  <?php
+    foreach($Borrowings as $Borrowing) {
+      echo print_r($Borrowing).'<br>';
+    };
+   ?>
 </body>
 </html>
