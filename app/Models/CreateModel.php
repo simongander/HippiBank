@@ -1,6 +1,7 @@
 <?php
+
 try {
-  $pdo = new PDO('mysql:host=localhost;dbname=HippiBank', 'root', '');
+  $pdo = new PDO('mysql:host=localhost;dbname=kurseictbz_30707', 'kurseictbz_30707', 'db_307_pw_06');
 } catch (PDOException $e) {
  die('Keine Verbindung zur Datenbank möglich: ' . $e->getMessage());
 }

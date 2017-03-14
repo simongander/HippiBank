@@ -34,9 +34,9 @@
         </select>
       </div>
       <div class="col-md-6">
-        <label for="hypoPacketDropdown">Hypo-Packet</label>
+        <label for="hypoPacketDropdown">Hypo-Paket</label>
         <select class="btn" style="display: block; width: 100%;" id="hypoPacketDropdown">
-          <option value="Risiko-Stufe">Hypo-Packet</option>
+          <option value="Risiko-Stufe">Hypo-Pakket</option>
           <?php
             foreach($hypoPackets as $hypoPacket){
               echo '<option value="'.$hypoPacket[id].'">'.$hypoPacket[package].'</option>';
