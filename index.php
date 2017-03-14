@@ -7,7 +7,6 @@
 <style>
  body {
      background-color: grey;
-     color: white;
  }
 </style>
 <nav class="navbar navbar-inverse navbar-static-top">
@@ -45,7 +44,7 @@
   </div>
 </nav>
 
-<div class="container">
+<div class="container" style="background-color: LightSlateGray">
   <div class = "row">
     <div class = "col-md-offset-3 col-sm-5">
       <?php
