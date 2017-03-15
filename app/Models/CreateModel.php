@@ -3,9 +3,7 @@
 $pdo = connectToDatabase();
 
 
-$Hypo = $pdo->prepare('SELECT * FROM mortgages');
-$Hypo->execute();
-$hypoPackets = $Hypo->fetchAll();
+$hypoPackets = GetHypoPackets();
 
 $Risk = $pdo->prepare('SELECT * FROM risikostufe');
 $Risk->execute();
