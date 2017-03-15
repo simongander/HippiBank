@@ -6,7 +6,8 @@ $routeList = [
     'erfassen' => 'app/Controllers/CreateController.php',
     'bearbeiten' => 'app/Controllers/ManipulateController.php',
     'uebersicht' => 'app/Controllers/OverviewController.php',
-    'riskStepSelected' => 'app/Controllers/returnDueTo.php'
+    'riskStepSelected' => 'app/Controllers/returnDueTo.php',
+    'borrowingSelected' => 'app/Controllers/ManipulateFormController.php'
 ];
 
 $routeDescriptions = [

@@ -7,48 +7,35 @@
   <title>Bearbeitung</title>
 </head>
 <body>
-  <form>
-    <br>
-    <div class="form-group">
-      <label for="name">Name</label>
-      <input class="form-control" id="name" placeholder="Name">
-    </div>
-    <div class="form-group">
-      <label for="email">Email</label>
-      <input type="email" class="form-control" id="email" placeholder="Email">
-    </div>
-    <div class="form-group">
-      <label for="phone">Telefonnummer</label>
-      <input class="form-control" id="phone" placeholder="Telefonnummer">
-    </div>
-
-    <div class="row">
-      <div class="col-md-6">
-        <label for="hypoPacketDropdown">Hypo-Paket</label>
-        <select class="btn" style="display: block; width: 100%;" id="hypoPacketDropdown">
-          <option value="Risiko-Stufe">Hypo-Paket</option>
-          <?php
-          foreach($hypoPackets as $hypoPacket){
-            echo '<option value="'.$hypoPacket[id].'">'.$hypoPacket[package].'</option>';
-            };
-            ?>
-        </select>
-      </div>
-      <div class="col-md-6">
-        <label for="isPaidback">Zurückzahlungsstatus</label>
-        <select id="isPaidback" class="btn" style="display: block; width: 100%;">
-          <option value="0">Ausstehend</option>
-          <option value="1">Zurückgezahlt</option>
-        </select>
-      </div>
-    </div>
-    <br>
-    <div class="form-group">
-      <input type="submit" value="Ändern" class="btn btn-warning col-sm-12">
-    </div>
-    <br>
-    <br>
-    <br>
-  </form>
+<form>
+  <br>
+  <div class="form-group">
+    <label for="borrowingSelection">Verleihe</label>
+    <select class="btn" style="display: block; width: 100%;" id="borrowingSelection">
+      <option value="null">Verleihe</option>
+      <?php
+      foreach($Borrowings as $Borrowing){
+        echo '<option value="'.$Borrowing['VerleihID'].'">'.$Borrowing['VerleihID'].', von '.$Borrowing['Name'].'</option>';
+        };
+        ?>
+    </select>
+  </div>
+  <br>
+</form>
+<output></output>
+<script>
+$('#borrowingSelection').on("change", function(){
+              value = $(this).val();
+              $.ajax({
+                  type: "POST",
+                  url: "borrowingSelected",
+                  data:{ value: value },
+              }).done(function (data) {
+                console.log(data);
+                var $htmlStr = $(data);
+                $('output').replaceWith($htmlStr.find('form'));
+              });
+          });
+</script>
 </body>
 </html>
