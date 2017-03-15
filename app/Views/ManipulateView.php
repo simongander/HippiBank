@@ -44,7 +44,7 @@
     </div>
     <br>
     <div class="form-group">
-      <input type="submit" value="Ändern" class="btn btn-primary col-sm-12">
+      <input type="submit" value="Ändern" class="btn btn-warning col-sm-12">
     </div>
     <br>
     <br>
