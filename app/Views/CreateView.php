@@ -10,15 +10,15 @@
   <form action="app/Controllers/ValidateController.php" method="post">
     <div class="form-group">
       <label for="name">Name</label>
-      <input class="form-control" id="name" name="name" placeholder="Name"></input>
+      <input class="form-control" id="name" name="name" placeholder="Name" required></input>
     </div>
     <div class="form-group">
       <label for="email">Email</label>
-      <input type="email" class="form-control" id="email" name="email" placeholder="Email"></input>
+      <input type="email" class="form-control" id="email" name="email" placeholder="Email" required></input>
     </div>
     <div class="form-group">
       <label for="phone">Telefonnummer</label>
-      <input class="form-control" id="phone" name="phone" placeholder="Telefonnummer"></input>
+      <input class="form-control" id="phone" name="phone" placeholder="Telefonnummer" required></input>
     </div>
 
     <div class="row">
