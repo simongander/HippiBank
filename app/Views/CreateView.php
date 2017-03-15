@@ -7,7 +7,7 @@
    </head>
    <body>
       <br>
-      <form action="app/Controllers/ValidateController.php" method="post">
+        <form action="validation" method="post">
          <div class="form-group">
             <label for="name">Name</label>
             <input class="form-control" id="name" name="name" placeholder="Name" required></input>

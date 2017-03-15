@@ -7,10 +7,10 @@ require 'app\Models\ValidateModel.php';
     $phone = $_POST['phone'] ?? '';
     $riskstep = $_POST['riskStepDropdown'] ?? '';
     $hypopacket = $_POST['hypoPacketDropdown'] ?? '';
-    $payback = $_POST['duetoOutput'] ?? '';
+    $paybackDate = $_POST['duetoOutput'] ?? '';
 	  if (!preg_match( '/[0-9][+][-][ ]/', $phone )) die( 'Der eingegebene Telefonnummer enthält nicht erlaubte Zeichen!' );
     if (!preg_match( '/[@]/', $email )) die( 'Die eingegebene Email enthält kein @!' );
-
-    SaveToDatabase($name, $email, $phone, $riskstep, $hypopacket, $payback);
+    $createDate = date("Y/m/d");
+    SaveToDatabase($name, $email, $phone, $createDate,$paybackDate, $riskstep, $hypopacket);
   }
 ?>

@@ -8,6 +8,7 @@ $routeList = [
     'uebersicht' => 'app/Controllers/OverviewController.php',
     'riskStepSelected' => 'app/Controllers/returnDueTo.php',
     'borrowingSelected' => 'app/Controllers/ManipulateFormController.php'
+    'validation' => 'app/Controllers/ValidateController.php'
 ];
 
 $routeDescriptions = [
