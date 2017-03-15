@@ -46,6 +46,9 @@
       </div>
     </div>
     <br>
+    <div class="form-group" id="duetoOutput">
+    </div>
+    <br>
     <div class="form-group">
       <input type="submit" value="Eintragen" class="btn btn-primary col-sm-12">
     </div>
@@ -53,5 +56,20 @@
     <br>
     <br>
   </form>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script>
+  $('#hypoPacketDropdown').on("change", function(){
+                value = $(this).val();
+                $.ajax({
+                    type: "POST",
+                    url: "hypoSelected",
+                    data:{ value: value },
+                }).done(function (data) {
+                  console.log(data);
+                  var $htmlStr = $(data);
+                  $('#duetoOutput').replaceWith($htmlStr.find('#duetoOutput'));
+                });
+            });
+  </script>
 </body>
 </html>
