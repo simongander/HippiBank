@@ -10,11 +10,9 @@ $routeList = [
 ];
 
 $routeDescriptions = [
-    '' => 'Home',
     'erfassen' => 'Verleihe erfassen',
     'bearbeiten' => 'Verleihe bearbeiten',
-    'uebersicht' => 'Übersicht',
-    'riskStepSelected' => ''
+    'uebersicht' => 'Übersicht'
 ];
 
 $router->define($routeList);

@@ -1,3 +1,4 @@
+<html>
 <head>
 <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -30,12 +31,12 @@
             $uri = $_GET['uri'] ?? '';
 
             require 'routes.php';
-            foreach($routeList as $routeName=>$route){
+            foreach($routeDescriptions as $routeName=>$routeDescription){
                 if ($routeName === $uri) {
-                    echo '<li class="active"><a href="'.$routeName.'">'.$routeDescriptions[$routeName].'</a></li>';
+                    echo '<li class="active"><a href="'.$routeName.'">'.$routeDescription.'</a></li>';
                 }
                 else {
-                    echo '<li><a href="'.$routeName.'">'.$routeDescriptions[$routeName].'</a></li>';
+                    echo '<li><a href="'.$routeName.'">'.$routeDescription.'</a></li>';
                 }
             };
         ?>
@@ -54,3 +55,4 @@
   </div>
 </div>
 </body>
+</html>
