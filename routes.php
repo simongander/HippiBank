@@ -6,7 +6,7 @@ $routeList = [
     'erfassen' => 'app/Controllers/CreateController.php',
     'bearbeiten' => 'app/Controllers/ManipulateController.php',
     'uebersicht' => 'app/Controllers/OverviewController.php',
-    'hypoSelected' => 'app/Controllers/returnDueTo.php'
+    'riskStepSelected' => 'app/Controllers/returnDueTo.php'
 ];
 
 $routeDescriptions = [
@@ -14,7 +14,7 @@ $routeDescriptions = [
     'erfassen' => 'Verleihe erfassen',
     'bearbeiten' => 'Verleihe bearbeiten',
     'uebersicht' => 'Übersicht',
-    'hypoSelected' => ''
+    'riskStepSelected' => ''
 ];
 
 $router->define($routeList);

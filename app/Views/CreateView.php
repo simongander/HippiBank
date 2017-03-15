@@ -25,10 +25,10 @@
       <div class="col-md-6">
         <label for="riskStepDropdown">Risiko-Stufe</label>
         <select class="btn" style="display: block; width: 100%;" id="riskStepDropdown">
-          <option value="Risiko-Stufe">Risiko-Stufe</option>
+          <option value="null">Risiko-Stufe</option>
           <?php
             foreach($riskSteps as $riskStep){
-              echo '<option value="'.$riskStep[Id].'">'.$riskStep[Risikostufe].'</option>';
+              echo '<option value="'.$riskStep[RisikoID].'">'.$riskStep[Risikostufe].'</option>';
             };
           ?>
         </select>
@@ -36,7 +36,7 @@
       <div class="col-md-6">
         <label for="hypoPacketDropdown">Hypo-Paket</label>
         <select class="btn" style="display: block; width: 100%;" id="hypoPacketDropdown">
-          <option value="Risiko-Stufe">Hypo-Paket</option>
+          <option value="null">Hypo-Paket</option>
           <?php
             foreach($hypoPackets as $hypoPacket){
               echo '<option value="'.$hypoPacket[id].'">'.$hypoPacket[package].'</option>';
@@ -58,11 +58,11 @@
   </form>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script>
-  $('#hypoPacketDropdown').on("change", function(){
+  $('#riskStepDropdown').on("change", function(){
                 value = $(this).val();
                 $.ajax({
                     type: "POST",
-                    url: "hypoSelected",
+                    url: "riskStepSelected",
                     data:{ value: value },
                 }).done(function (data) {
                   console.log(data);

@@ -1,14 +1,15 @@
 <?php
-try {
-  $pdo = new PDO('mysql:host=localhost;dbname=HippiBank', 'root', '');
-} catch (PDOException $e) {
- die('Keine Verbindung zur Datenbank möglich: ' . $e->getMessage());
-}
+$pdo = connectToDatabase();
 
 $id = $_POST['value'];
-$dueto = Date('d.m.Y', strtotime('+'.$id.' days'));
+$statement = $pdo->prepare('SELECT Verleihdauer, RisikoID FROM risikostufe where RisikoID="'.$id.'"');
+$statement->execute();
+$result = $statement ->fetchAll();
 
-if ($id == 'Risiko-Stufe') {
+$dueto = Date('d.m.Y', strtotime('+'.$result[0][Verleihdauer].' days'));
+
+
+if ($id == 'null') {
   echo '<div class="form-group" id="duetoOutput"></div>';
 } else {
   echo <<<END
@@ -18,7 +19,4 @@ if ($id == 'Risiko-Stufe') {
         </div>
 END;
 };
-$statement = $pdo->prepare('SELECT * FROM morages where id="'.$id.'"');
-$statement->execute();
-$result = $statement ->fetchAll();
 ?>
