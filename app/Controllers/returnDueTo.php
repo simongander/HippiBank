@@ -11,7 +11,8 @@ $dueto = Date('d.m.Y', strtotime('+'.$result[0][Verleihdauer].' days'));
 
 if ($id == 'null') {
   echo '<div class="form-group" id="duetoOutput"></div>';
-} else {
+}
+else {
   echo <<<END
         <div class="form-group" id="duetoOutput">
           <label for="duetoField">Zahlbar Bis</label>
