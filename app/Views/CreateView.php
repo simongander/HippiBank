@@ -7,24 +7,24 @@
 </head>
 <body>
   <br>
-  <form>
+  <form action="app/Controllers/ValidateController.php" method="post">
     <div class="form-group">
       <label for="name">Name</label>
-      <input class="form-control" id="name" placeholder="Name">
+      <input class="form-control" id="name" name="name" placeholder="Name"></input>
     </div>
     <div class="form-group">
       <label for="email">Email</label>
-      <input type="email" class="form-control" id="email" placeholder="Email">
+      <input type="email" class="form-control" id="email" name="email" placeholder="Email"></input>
     </div>
     <div class="form-group">
       <label for="phone">Telefonnummer</label>
-      <input class="form-control" id="phone" placeholder="Telefonnummer">
+      <input class="form-control" id="phone" name="phone" placeholder="Telefonnummer"></input>
     </div>
 
     <div class="row">
       <div class="col-md-6">
         <label for="riskStepDropdown">Risiko-Stufe</label>
-        <select class="btn" style="display: block; width: 100%;" id="riskStepDropdown">
+        <select class="btn" style="display: block; width: 100%;" id="riskStepDropdown" name="riskStepDropdown">
           <option value="null">Risiko-Stufe</option>
           <?php
             foreach($riskSteps as $riskStep){
@@ -35,7 +35,7 @@
       </div>
       <div class="col-md-6">
         <label for="hypoPacketDropdown">Hypo-Paket</label>
-        <select class="btn" style="display: block; width: 100%;" id="hypoPacketDropdown">
+        <select class="btn" style="display: block; width: 100%;" id="hypoPacketDropdown" name="hypoPacketDropdown">
           <option value="null">Hypo-Paket</option>
           <?php
             foreach($hypoPackets as $hypoPacket){
@@ -50,7 +50,7 @@
     </div>
     <br>
     <div class="form-group">
-      <input type="submit" value="Eintragen" class="btn btn-primary col-sm-12">
+      <input type="submit" value="Eintragen" class="btn btn-primary col-sm-12" />
     </div>
     <br>
     <br>
