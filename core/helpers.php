@@ -24,3 +24,12 @@ function post(string $key, $default = '')
 {
     return $_POST[$key] ?? $default;
 }
+
+function GetHypoPackets()
+{
+$pdo = connectToDatabase();
+$Hypo = $pdo->prepare('SELECT * FROM mortgages');
+$Hypo->execute();
+$hypoPackets = $Hypo->fetchAll();
+return $hypoPackets;
+}

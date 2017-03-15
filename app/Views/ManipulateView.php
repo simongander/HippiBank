@@ -28,8 +28,8 @@
         <select class="btn" style="display: block; width: 100%;" id="hypoPacketDropdown">
           <option value="Risiko-Stufe">Hypo-Paket</option>
           <?php
-            foreach($hypoPackets as $hypoPacketId=>$hypoPacket){
-              echo '<option value="'.$hypoPacketId.'">'.$hypoPacket.'</option>';
+          foreach($hypoPackets as $hypoPacket){
+            echo '<option value="'.$hypoPacket[id].'">'.$hypoPacket[package].'</option>';
             };
             ?>
         </select>
