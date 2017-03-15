@@ -26,6 +26,7 @@
 <script>
 $('#borrowingSelection').on("change", function(){
               value = $(this).val();
+              if (value == 'null') return;
               $.ajax({
                   type: "POST",
                   url: "borrowingSelected",
